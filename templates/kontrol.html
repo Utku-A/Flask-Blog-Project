@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>Profilim</h3>
+<small>Hoşgeldin {{session["username"]}} </small>
+<hr>
+
+<a href="/addarticle" class = "btn btn-danger">Paylaşıma Açık Yükle</a>
+
+<br>
+
+{% if article %}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">Yazar</th>
+      <th scope="col">Tarih</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <br>
+ 
+    {% for article in article %}
+        
+        
+        <tr>
+            <th scope="row">{{article.id}}</th>
+            <td ><a href="/article/{{article.id}}">{{article.title}}</a></td>
+            <td>{{article.author}}</td>
+            <td>{{article.created_date}}</td>
+            <td><a href="/edit/{{article.id}}" class = "btn btn-danger">Güncelle</a></td>
+            <td><a href="/delete/{{article.id}}" class = "btn btn-danger">Sil</a></td>
+        </tr>
+        
+
+
+    {% endfor %}
+
+ </table> 
+
+ <br>
+ <br>
+ <br>
+ <br>
+{% else %}
+
+<br>
+<br>
+<div class= "alert alert-warding>">Henüz Günlük Bulunmuyor</div>
+
+{% endif %}
+
+{% endblock  %}

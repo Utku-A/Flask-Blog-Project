@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>Keşfet</h3>
+<hr>
+
+{% if articles %}
+
+<form action="/search" method = "post">
+<input type="text" class="form-control" name="keyword" id="search" placeholder="Başlık Arama">
+</form>
+
+<br>
+
+
+  {% for article in articles %}
+<table class="table">
+  <div id="content">
+    <tr>
+      <tr><h4>{{article.title}}</h4></tr>
+      <hr>
+      <tr>{{article.content|safe}}</tr>
+      <tr align = "center">
+        <th><h5 ><a href="#">{{article.author}}</a></h5></th>
+        <th><button type="submit" class="btn btn-outline-secondary">Takip Et</button></th>
+        <th><button type="submit" class="btn btn-outline-secondary">Beğen</button></th>
+        <th></th>
+        <th scope="col">Ekleme Tarihi : {{article.created_date}}</th>
+      </tr>
+    </tr>
+  </div>
+</table>
+  <br>
+  <br>
+  <br>
+  {% endfor %}
+
+
+{% else %}
+<div class= "alert alert-danger">Burada henüz günlük paylaşılmamış</div>
+{% endif %}
+
+{% endblock  %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3> Takip Ettiklerim</h3>
+
+<hr>
+
+{% if session["logged_in"] == True %}
+
+    <div class = "alert alert-danger">Takip edilen kullanıcı yok</div>
+
+{% else %}
+              
+    <div class = "alert alert-danger">Lütfen Giriş Yapın.</div>
+
+{%endif%}
+
+{% endblock body %}

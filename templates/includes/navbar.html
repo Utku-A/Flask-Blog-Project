@@ -1,0 +1,50 @@
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="/"><h2>Günlük</h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">Takip Ettiklerim</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/articles">Keşfet</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/mesages">Mektup</a>
+          </li>
+         </ul>
+         <ul class="navbar-nav ml-auto">
+          
+          
+          {% if session["logged_in"] == True %}
+
+              <li class="nav-item active">
+                 <a class="nav-link" href="/kontrol">Profilim</a>
+              </li>
+
+              <li class="nav-item active">
+                 <a class="nav-link" href="/logout">Güvenli Çıkış</a>
+              </li>
+
+
+
+          {% else %}
+
+
+              <li class="nav-item active">
+                <a class="nav-link" href="/login">Giriş</a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link" href="/register">Kayıt Olun</a>
+              </li>
+            
+
+
+          {% endif %}
+      </div>
+    </nav>

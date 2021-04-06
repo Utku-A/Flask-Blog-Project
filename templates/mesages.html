@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+
+div.center {
+  position: relative;
+  width: 1100px;
+  height: 500px;
+  border: 3px solid red;
+}
+
+div.online {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 430px;
+  border: 3px solid blue;
+} 
+
+div.chat {
+  position: absolute;
+  left: 220px;  
+  width: 850px;
+  height: 430px;
+  border: 3px solid green;
+} 
+
+</style>
+
+<div class= "center">
+
+<h4>Mektup Gönder<h4><hr>
+
+<div class= "online">
+
+ <h5 align="center">Kullanıcılar</h5>
+<ul>
+{% for article in articles %}
+
+<li>{{article.author}}</li>
+
+{% endfor %}
+</ul>
+</div>
+
+<div class= "chat">
+
+Mektup Menüsü
+
+
+<div>
+
+</div>
+
+
+
+
+
+<!-- <meta http-equiv="refresh" content="5;http://127.0.0.1:5000/"> -->
+
+{% endblock  %}
+
