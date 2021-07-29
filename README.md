@@ -1,7 +1,7 @@
 # Günlük Form Sitesi Projesi
 &nbsp;&nbsp;&nbsp;&nbsp;İnsanların anonim olarak günlüklerini yazabilecekleri, kaydedebileceği, paylaşabileceği bir form sitesi.
 
-<img src="ReadmeImages/Anasayfa.png">
+<img src="ReadmeImages/Anasayfa.PNG">
 
 </br>
 </br>
@@ -17,7 +17,7 @@
 - Kullanıcı mesaj gönderme ( Gelecek güncelleme )
 
 # Kurulum
-## MySql için 
+### MySql için 
 
 Gunluk adında bir database yaratılır ve ardından aşağıdaki tablolar yaratılır.
 ```SQL
