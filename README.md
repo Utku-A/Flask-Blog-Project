@@ -1,7 +1,7 @@
 # Günlük Form Sitesi Projesi
 &nbsp;&nbsp;&nbsp;&nbsp;İnsanların anonim olarak günlüklerini yazabilecekleri, kaydedebileceği, paylaşabileceği bir form sitesi.
 
-<img src="ReadmeImages/anasayfa.png">
+<img src="ReadmeImages/Anasayfa.png">
 
 </br>
 </br>
