@@ -36,8 +36,3 @@ Gunluk adında bir database yaratılır ve ardından aşağıdaki tablolar yarat
 - pip install passlib
 
 - pip install email_validator
-
-</br>
-</br>
-
-## Bir fikriniz varsa mutlaka ulaşın bana 👋
